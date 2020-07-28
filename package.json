@@ -5,8 +5,10 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "codemirror": "5.55.0",
     "jest": "26.1.0",
     "react": "16.12.0",
+    "react-codemirror2": "7.2.1",
     "react-dom": "16.12.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.0.1",

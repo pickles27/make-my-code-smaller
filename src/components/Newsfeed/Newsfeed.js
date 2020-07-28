@@ -1,16 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 import { submissionList } from "../../../mockData";
-import { SubmissionCard } from "./Card/Card";
+import Card from "./Card/Card";
 
-export default function Newsfeed() {
+export function Newsfeed({ className }) {
   return (
-    <div>
+    <div className={className}>
       <ul>
         {submissionList.map(submission => {
           const { id } = submission;
-          return <SubmissionCard key={id} data={submission} />;
+          return <Card key={id} data={submission} />;
         })}
       </ul>
     </div>
   );
 }
+
+export default styled(Newsfeed)`
+  ul {
+    padding: 0;
+  }
+`;

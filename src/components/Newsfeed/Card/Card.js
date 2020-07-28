@@ -1,15 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export function Card({ data }) {
+export function Card({ data, className }) {
   return (
-    <div>
-      <h3>{data.title}</h3>
-      <p>{data.body}</p>
+    <div className={className}>
+      <Title>{data.title}</Title>
+      <Author>{data.author}</Author>
+      <code>{data.body}</code>
+      <Link to="/submit">Challenge</Link>
     </div>
   );
 }
 
-export const SubmissionCard = styled(Card)`
-  border: 2px solid red;
+const Title = styled.h3`
+  margin: 0;
+`;
+
+const Author = styled.p`
+  margin: 0;
+`;
+
+export default styled(Card)`
+  border: double thick purple;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
 `;
