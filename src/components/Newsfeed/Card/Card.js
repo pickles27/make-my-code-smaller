@@ -8,7 +8,7 @@ export function Card({ data, className }) {
       <Title>{data.title}</Title>
       <Author>{data.author}</Author>
       <code>{data.body}</code>
-      <Link to="/submit">Challenge</Link>
+      <Link to={`/submit/:${data.id}`}>Challenge</Link>
     </div>
   );
 }
@@ -26,4 +26,6 @@ export default styled(Card)`
   margin: 1rem;
   display: flex;
   flex-direction: column;
+  min-height: 10rem;
+  justify-content: space-around;
 `;
