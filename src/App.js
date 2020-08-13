@@ -16,7 +16,7 @@ export default function App() {
           <Route exact path="/">
             <Newsfeed />
           </Route>
-          <Route path="/submit">
+          <Route path="/submit/:id">
             <Submission />
           </Route>
           <Route path="/profile">

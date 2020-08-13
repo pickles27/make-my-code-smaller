@@ -3,7 +3,23 @@ export const submissionList = [
     id: "1",
     author: "pickles1337",
     title: "i challenge you",
-    body: "here the giant block of code should exist."
+    body: `var maxSubArray = function(nums) {
+      var max = nums[0];
+      var count;
+      for (var start = 0; start < nums.length; start++) {
+          count = nums[start];
+          for (var end = start; end < nums.length; end++) {
+              if (start !== end) {
+                  count += nums[end];
+              }
+              if (count > max) {
+                  max = count;
+              }
+          }
+      }
+      
+      return max;
+  };`
   },
   {
     id: "2",
