@@ -5,27 +5,35 @@ import { Link } from "react-router-dom";
 export function Card({ data, className }) {
   return (
     <div className={className}>
-      <Title>{data.title}</Title>
-      <Author>{data.author}</Author>
-      <code>{data.body}</code>
+      <div>
+        <Title>{data.title}</Title>
+        <Author>{data.author}</Author>
+      </div>
+      <CodeBody>{data.body}</CodeBody>
       <Link to={`/submit/:${data.id}`}>Challenge</Link>
     </div>
   );
 }
 
 const Title = styled.h3`
-  margin: 0;
+  margin: .5em;
 `;
 
 const Author = styled.p`
   margin: 0;
 `;
 
+const CodeBody = styled.code`
+  padding: 0em 2em;
+`;
+
 export default styled(Card)`
-  border: double thick purple;
-  margin: 1rem;
+  border: solid lightgray 1px;
+  box-shadow: 5px 5px 15px -6px #C6C6C6;
+  margin: 1.7rem 1rem;
+  padding: 2rem;
+  min-height: 20rem;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  min-height: 10rem;
-  justify-content: space-around;
 `;

@@ -1,6 +1,6 @@
 import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { NavWrapper, TitleWrapper } from "./styles";
 
 export default function Navbar() {
   return (
@@ -8,13 +8,13 @@ export default function Navbar() {
       <NavWrapper>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <StyledLink to="/">Home</StyledLink>
           </li>
           <li>
-            <Link to="/submit">Submit</Link>
+            <StyledLink to="/submit">Submit</StyledLink>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <StyledLink to="/profile">Profile</StyledLink>
           </li>
         </ul>
       </NavWrapper>
@@ -22,3 +22,20 @@ export default function Navbar() {
     </div>
   );
 }
+
+
+export const NavWrapper = styled.nav`
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+export const TitleWrapper = styled.h1`
+  text-align: center;
+`;
