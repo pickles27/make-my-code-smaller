@@ -1,0 +1,25 @@
+enum ProgrammingLanguage {
+    JAVASCRIPT
+}
+
+input SubmissionInput {
+    author: String!
+    body: String!
+    timestamp: Time!
+    language: ProgrammingLanguage!
+    parent: ID!
+}
+
+type User {
+    username: String! @unique
+    submissions: [Submission] @relation
+}
+
+type Submission {
+    author: User! @relation
+    body: String!
+    date: Time!
+    language: ProgrammingLanguage
+    parent: Submission
+}
+

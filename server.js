@@ -5,4 +5,4 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(1337);
+app.listen(1337, () => console.log(`listening o.o`));
